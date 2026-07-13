@@ -555,6 +555,8 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
 .hero-uc-grid{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.75fr);gap:1rem}.klio-stage,.klio-message{min-height:290px;border:1px solid rgba(245,242,235,.1);border-radius:20px;background:linear-gradient(145deg,rgba(245,242,235,.055),rgba(245,242,235,.018))}.klio-stage{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}.klio-stage::before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:rgba(31,58,95,.2);filter:blur(34px)}.klio-orb{position:relative;width:190px;height:190px;display:grid;place-items:center}.klio-orb canvas{position:relative;z-index:2;width:100%;height:100%}.klio-orb>i{position:absolute;inset:20%;border-radius:50%;background:rgba(255,91,61,.12);filter:blur(20px);animation:klioBreathe 2.8s ease-in-out infinite}.klio-state{display:flex;align-items:center;gap:.45rem;font:500 .55rem/1 var(--font-mono);letter-spacing:.09em;color:rgba(245,242,235,.56)}.klio-state span{width:7px;height:7px;border-radius:50%;background:var(--spark);box-shadow:0 0 0 0 rgba(255,91,61,.5);animation:klioPing 1.8s infinite}.klio-wave{display:flex;align-items:center;height:22px;gap:3px;margin-top:.55rem}.klio-wave i{display:block;width:2px;height:5px;border-radius:2px;background:var(--spark);animation:klioWave .9s ease-in-out infinite}.klio-wave i:nth-child(2),.klio-wave i:nth-child(6){animation-delay:.1s}.klio-wave i:nth-child(3),.klio-wave i:nth-child(5){animation-delay:.2s}.klio-wave i:nth-child(4){animation-delay:.3s}@keyframes klioWave{50%{height:18px}}@keyframes klioBreathe{50%{transform:scale(1.16);opacity:.65}}@keyframes klioPing{70%{box-shadow:0 0 0 10px rgba(255,91,61,0)}}
 .klio-message{padding:clamp(1.4rem,3vw,2.2rem);display:flex;flex-direction:column;justify-content:center}.klio-message h3{max-width:20ch;margin:.85rem 0 .75rem;font-size:clamp(1.6rem,3vw,2.75rem);line-height:1.04;letter-spacing:-.035em}.klio-message h3 span{color:var(--spark)}.klio-message>p{max-width:55ch;color:rgba(245,242,235,.54);font-size:.9rem;line-height:1.55}.klio-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;margin-top:1.35rem}.klio-metrics>span{padding:.75rem;border-radius:11px;background:rgba(245,242,235,.035)}.klio-metrics small{display:block;font:500 .47rem/1 var(--font-mono);letter-spacing:.1em;color:rgba(245,242,235,.28)}.klio-metrics b{display:block;margin-top:.35rem;font-size:.68rem}.klio-metrics b.ready{color:#7dc99d}
 .hero-uc-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:1rem}.hero-uc-flow>span{position:relative;padding:.8rem .8rem .8rem 2.6rem;border:1px solid rgba(245,242,235,.08);border-radius:12px;background:rgba(245,242,235,.025)}.hero-uc-flow>span:not(:last-child)::after{content:"";position:absolute;top:50%;right:-.65rem;width:.65rem;height:1px;background:rgba(245,242,235,.15)}.hero-uc-flow i{position:absolute;left:.8rem;top:.8rem;width:20px;height:20px;display:grid;place-items:center;border-radius:50%;background:rgba(245,242,235,.06);font:500 .48rem/1 var(--font-mono);font-style:normal;color:rgba(245,242,235,.42)}.hero-uc-flow b,.hero-uc-flow small{display:block}.hero-uc-flow b{font-size:.65rem}.hero-uc-flow small{margin-top:.2rem;font-size:.52rem;color:rgba(245,242,235,.34)}.hero-uc-flow .done i{background:rgba(43,143,95,.14);color:#7dc99d}.hero-uc-flow .active{border-color:rgba(255,91,61,.35);box-shadow:0 0 24px rgba(255,91,61,.07)}.hero-uc-flow .active i{background:rgba(255,91,61,.15);color:var(--spark)}
+.demo-disclaimer{margin-top:.7rem;font-size:.7rem;line-height:1.45;color:rgba(245,242,235,.46);text-align:right}
+.demo-disclaimer.on-light{color:#77736d}
 .prob-grid{align-items:stretch}.prob-card{height:100%}.prob-card .kv{line-height:1.52}.prob-close.prob-quote{position:relative;max-width:1080px;margin-top:clamp(3rem,6vw,5.5rem);padding:0 0 0 clamp(2.2rem,5vw,5rem);border:0;border-radius:0;background:transparent;color:var(--ink);box-shadow:none}.prob-quote .quote-mark{position:absolute;left:0;top:-.28em;color:var(--spark);font:700 clamp(4rem,9vw,8rem)/1 Georgia,serif}.prob-quote h2{max-width:22ch;font-size:clamp(2rem,4.6vw,4.5rem);line-height:1.02;letter-spacing:-.045em}.prob-quote h2 em{color:var(--spark);font-style:normal}.prob-quote p{margin-top:1.2rem;font-size:clamp(1rem,1.5vw,1.25rem);color:var(--muted)}
 
 @media(max-width:960px){.hero{padding-bottom:15rem}.hero h1{max-width:14ch}.hero .lead{margin-top:3rem}.hero::after{height:190px}.hero-uc-grid{grid-template-columns:220px 1fr}.klio-message h3{font-size:clamp(1.55rem,4vw,2.35rem)}.hero-uc-flow{grid-template-columns:1fr 1fr}.hero-uc-flow>span:nth-child(2)::after{display:none}}
@@ -657,7 +659,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
     </div>
     <div class="hero-visual" id="heroVisual">
       <div class="hero-uc-app" aria-label="Klio identifies an untapped lifecycle revenue segment in Klints">
-        <div class="hero-uc-top"><span><i></i><i></i><i></i><b>app.klints.ai · Lumera Skin</b></span><em><i></i> Live data</em></div>
+        <div class="hero-uc-top"><span><i></i><i></i><i></i><b>Demo tenant · Lumera Skin</b></span><em><i></i> Live data</em></div>
         <div class="hero-uc-shell">
           <aside class="hero-uc-nav" aria-hidden="true"><div>K<span></span></div><i>⌂</i><i class="active">◉</i><i>↗</i><i>✓</i></aside>
           <div class="hero-uc-main">
@@ -670,6 +672,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
           </div>
         </div>
       </div>
+      <p class="demo-disclaimer">Demo tenant · Lumera Skin. Illustrative use case from the Klints demo environment — not a client's results.</p>
     </div>
   </div>
 </section>
@@ -783,7 +786,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
           </svg>
           <div class="dial-num"><div class="n" id="bigNum">0</div><div class="d" id="bigDelta">▲ +27 after repair</div></div>
         </div>
-        <div class="dcs-note">Illustrative repair sequence from the Klints demo environment — not a client result. Your number is what the founding cohort assessment establishes.</div>
+        <div class="dcs-note">Demo tenant · Lumera Skin. Illustrative use case from the Klints demo environment — not a client's results. Your number is what the founding cohort assessment establishes.</div>
       </div>
       <div class="dim-list reveal d1">
         <button class="dim" data-fill="88"><div class="dim-top"><span class="dim-name">Identity</span><span class="dim-val" data-to="88">0</span></div><div class="bar"><i></i></div><div class="dim-desc">Duplicate and orphaned profiles, identity resolution across commerce and marketing systems, consent state alignment.</div></button>
@@ -830,7 +833,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
       </div>
     </div>
     <div class="preview-stage reveal" id="previewStage">
-      <div class="preview-chrome"><span></span><span></span><span></span><b>app.klints.ai · Lumera Skin</b><em><i></i> Live data</em></div>
+      <div class="preview-chrome"><span></span><span></span><span></span><b>Demo tenant · Lumera Skin</b><em><i></i> Live data</em></div>
       <div class="preview-shell">
         <aside class="preview-sidebar" aria-hidden="true"><div class="preview-logo">K<i></i></div><span>⌂</span><span class="active">◉</span><span>↗</span><span>✓</span><span>⇢</span></aside>
         <div class="preview-panel active" data-panel="score">
@@ -860,6 +863,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
       </div>
       <div class="preview-progress" aria-hidden="true"><i></i></div>
     </div>
+    <p class="demo-disclaimer on-light reveal">Demo tenant · Lumera Skin. Illustrative use case from the Klints demo environment — not a client's results.</p>
   </div>
 </section>
 
