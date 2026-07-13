@@ -991,10 +991,10 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
       </div>
       <div class="foot-col"><div class="fk">Product</div><a href="#layer">How it works</a><a href="#dcs">Data Consistency Score</a><a href="#capabilities">Capabilities</a><a href="#check">Stack Integrity Check</a></div>
       <div class="foot-col"><div class="fk">Founding cohort</div><a href="#offer">The offer</a><a href="#faq">FAQ</a><a class="js-apply" href="https://form.typeform.com/to/TI2OjLZf" target="_blank" rel="noopener">Apply</a></div>
-      <div class="foot-col"><div class="fk">Company</div><a href="https://klints.ai" class="mono" style="font-family:var(--font-mono)">klints.ai</a><a class="js-mailto" href="#">Contact</a><a href="#">Privacy</a><a href="#">Terms</a></div>
+      <div class="foot-col"><div class="fk">Contact</div><a href="mailto:george@klints.io">Klints founder: george@klints.io</a></div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Klints · Operated by COMENIUS Agency s.r.o. · Jaurisova 515/4, 140 00 Praha 4 – Michle, Czech Republic · IČO 06603360</span>
+      <span>© 2026 Klints.io. All information is confidential. Access is by invitation only.</span>
     </div>
   </div>
 </footer>
@@ -1004,9 +1004,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
 <script>
 /* ================= CONFIG ================= */
 var APPLY_URL = "https://form.typeform.com/to/TI2OjLZf";
-var CONTACT_EMAIL = "REPLACE_WITH_EMAIL";           /* e.g. partners@klints.ai */
 var hasApplyUrl = APPLY_URL.indexOf("REPLACE") === -1;
-var hasContactEmail = CONTACT_EMAIL.indexOf("REPLACE") === -1;
 var applyHref = hasApplyUrl ? APPLY_URL : "#apply";
 var toast = document.getElementById("comingToast"), toastTimer;
 function showComingSoon(){
@@ -1019,11 +1017,6 @@ document.querySelectorAll(".js-apply").forEach(function(a){
   if(hasApplyUrl && applyHref.indexOf("http")===0){ a.target="_blank"; a.rel="noopener"; }
   if(!hasApplyUrl){ a.addEventListener("click", function(e){ e.preventDefault(); showComingSoon(); }); }
 });
-document.querySelectorAll(".js-mailto").forEach(function(a){
-  if(hasContactEmail){ a.href = "mailto:" + CONTACT_EMAIL; }
-  else { a.href = "#apply"; a.addEventListener("click", function(e){ e.preventDefault(); showComingSoon(); }); }
-});
-
 var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /* ================= Header + mobile nav ================= */
