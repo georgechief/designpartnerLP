@@ -560,13 +560,17 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
 @media(max-width:960px){.hero{padding-bottom:15rem}.hero h1{max-width:14ch}.hero .lead{margin-top:3rem}.hero::after{height:190px}.hero-uc-grid{grid-template-columns:220px 1fr}.klio-message h3{font-size:clamp(1.55rem,4vw,2.35rem)}.hero-uc-flow{grid-template-columns:1fr 1fr}.hero-uc-flow>span:nth-child(2)::after{display:none}}
 @media(max-width:640px){.hero{padding-top:8.5rem;padding-bottom:13rem}.hero h1{max-width:none;font-size:clamp(2.55rem,12vw,4rem)}.hero .lead{margin-top:3.4rem;font-size:1rem}.hero::after{height:155px;background-position:34% 52%}.hero-visual{margin-top:3.5rem}.hero-uc-app{border-radius:20px}.hero-uc-top{height:42px}.hero-uc-top b{display:none}.hero-uc-shell{grid-template-columns:1fr}.hero-uc-nav{display:none}.hero-uc-main{padding:1rem}.hero-uc-head{display:block}.hero-uc-head>span{width:max-content;margin-top:.75rem}.hero-uc-grid{grid-template-columns:1fr}.klio-stage{min-height:190px}.klio-orb{width:135px;height:135px}.klio-message{min-height:0;padding:1.2rem}.klio-message h3{max-width:none;font-size:1.7rem}.klio-message>p{font-size:.82rem}.klio-metrics{grid-template-columns:1fr 1fr}.klio-metrics>span:last-child{grid-column:1/-1}.hero-uc-flow{grid-template-columns:1fr}.hero-uc-flow>span::after{display:none}.prob-close.prob-quote{padding-left:2.3rem}.prob-quote .quote-mark{font-size:4rem}.q-scorecard{grid-template-columns:1fr}.q-score{padding-bottom:1rem;border-right:0;border-bottom:1px solid var(--stone)}.q-domains{gap:.8rem}.q-domain{grid-template-columns:1fr 36px}.q-domain>i{grid-column:1/-1;grid-row:2}.q-domain em{grid-column:2;grid-row:1}}
 
-/* Mobile Klints layer: sticky architecture mini-map */
+/* Mobile Klints layer: iOS-safe pinned architecture mini-map */
 @media(max-width:640px){
-  #layer{overflow:visible;padding-bottom:2rem}
-  #layer>.container{overflow:visible}
+  #layer{overflow:visible!important;padding-bottom:2rem}
+  #layer>.container{overflow:visible!important}
   #layer .sec-head{margin-bottom:2rem}
-  .layer-wrap{display:block;position:relative}
-  .layer-sticky{position:sticky;top:76px;z-index:24;margin:0 -1px;transform:none!important}
+  .layer-wrap{display:block;position:relative;overflow:visible!important}
+  .layer-sticky{position:relative;top:auto;z-index:24;margin:0 -1px;transform:none!important;-webkit-transform:none!important;will-change:auto}
+  .mobile-pin-spacer{display:block;height:0;pointer-events:none}
+  .mobile-pin-spacer.active{height:var(--mobile-pin-height,238px)}
+  .layer-sticky.mobile-fixed{position:fixed!important;top:var(--mobile-pin-top,76px)!important;left:var(--mobile-pin-left,1.1rem)!important;width:var(--mobile-pin-width,calc(100vw - 2.2rem))!important;margin:0!important;z-index:60}
+  .layer-sticky.mobile-past{position:absolute!important;top:auto!important;right:auto!important;bottom:0;left:0!important;width:100%!important;margin:0!important;z-index:24}
   .layer-diagram{padding:0;border:0;border-radius:17px;background:transparent;box-shadow:0 18px 42px rgba(0,0,0,.28)}
   .arch-map{display:grid;grid-template-columns:1fr 1fr;gap:4px;min-height:0;height:238px;padding:.55rem;border:1px solid rgba(245,242,235,.12);border-radius:17px;background:linear-gradient(155deg,#171a20,#0d0f13);box-shadow:inset 0 1px rgba(255,255,255,.03)}
   .arch-map::before{width:180px;height:180px;top:48%;filter:blur(45px)}
@@ -590,15 +594,14 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
   .arch-gate{grid-column:1}.arch-gate span{font-size:.38rem}.arch-gate b{display:none}.arch-gate>i{width:16px;height:16px;margin-left:auto}
   .arch-agent{grid-column:2;gap:.35rem}.arch-agent-icon{width:21px;height:21px;border-radius:6px;font-size:.5rem}.arch-agent small,.arch-agent em{display:none}.arch-agent b{font-size:.47rem;margin:0;white-space:nowrap}
   .arch-map .dg-node.lit,.arch-map .dg-node.lit-spark{transform:none;box-shadow:0 0 0 1px rgba(255,91,61,.08),0 0 18px rgba(255,91,61,.16)}
-  .step-list{gap:0;padding:0 0 18vh}
-  .step{display:flex;flex-direction:column;justify-content:center;min-height:62svh;margin:0;padding:2.2rem .4rem 2.2rem 1.25rem;scroll-margin-top:330px}
+  .step-list{gap:.8rem;padding:1rem 0 calc(238px + 2rem)}
+  .step{display:block;min-height:0;margin:0;padding:1.45rem .65rem 1.55rem 1.25rem;border-radius:0 14px 14px 0;background:rgba(245,242,235,.018);scroll-margin-top:330px}
   .step.active{opacity:1;border-color:var(--spark)}
   .step:not(.active){opacity:.32}
 }
 @media(max-width:640px) and (max-height:620px){
-  .layer-sticky{position:relative;top:auto}
   .arch-map{height:228px}
-  .step{min-height:auto;padding-top:2.5rem;padding-bottom:2.5rem}
+  .step-list{padding-bottom:calc(228px + 1.5rem)}
 }
 @media(prefers-reduced-motion:reduce){.klio-orb>i,.klio-state span,.klio-wave i{animation:none}}
 </style>
@@ -1202,17 +1205,94 @@ document.querySelectorAll(".reveal,.proof,.fcard").forEach(function(el){ io.obse
       var f = document.getElementById(id.trim()); if(f) f.classList.add("lit");
     });
   }
+  var mobileQuery = window.matchMedia("(max-width: 640px)");
+  var activeStep = steps[0];
+  function activate(step){
+    if(!step || step === activeStep && step.classList.contains("active")) return;
+    steps.forEach(function(s){ s.classList.remove("active"); });
+    step.classList.add("active");
+    activeStep = step;
+    light(step);
+  }
   var sio = new IntersectionObserver(function(es){
+    if(mobileQuery.matches) return;
     es.forEach(function(en){
       if(en.isIntersecting){
-        steps.forEach(function(s){ s.classList.remove("active"); });
-        en.target.classList.add("active");
-        light(en.target);
+        activate(en.target);
       }
     });
   },{rootMargin:"-40% 0px -45% 0px"});
   steps.forEach(function(s){ sio.observe(s); });
   steps[0].classList.add("active"); light(steps[0]);
+
+  /* iOS Safari can drop CSS sticky when a section has clipped or animated
+     ancestors. On phones the map is therefore pinned explicitly while the
+     story is in view, then parked in the reserved space at its end. */
+  var layerWrap = document.querySelector("#layer .layer-wrap");
+  var sticky = document.querySelector("#layer .layer-sticky");
+  var header = document.getElementById("siteHeader");
+  var spacer = document.createElement("div");
+  var pinFrame = 0;
+  spacer.className = "mobile-pin-spacer";
+  spacer.setAttribute("aria-hidden","true");
+  sticky.parentNode.insertBefore(spacer,sticky);
+
+  function resetPin(){
+    sticky.classList.remove("mobile-fixed","mobile-past");
+    spacer.classList.remove("active");
+    spacer.style.removeProperty("--mobile-pin-height");
+    sticky.style.removeProperty("--mobile-pin-top");
+    sticky.style.removeProperty("--mobile-pin-left");
+    sticky.style.removeProperty("--mobile-pin-width");
+  }
+  function updateMobileStory(){
+    pinFrame = 0;
+    if(!mobileQuery.matches){ resetPin(); return; }
+
+    var wrapRect = layerWrap.getBoundingClientRect();
+    var headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 68;
+    var pinTop = headerHeight + 8;
+    var mapHeight = Math.ceil(sticky.getBoundingClientRect().height || 238);
+    var before = wrapRect.top > pinTop;
+    var past = wrapRect.bottom <= pinTop + mapHeight + 12;
+
+    sticky.style.setProperty("--mobile-pin-top",pinTop + "px");
+    sticky.style.setProperty("--mobile-pin-left",Math.round(wrapRect.left) + "px");
+    sticky.style.setProperty("--mobile-pin-width",Math.round(wrapRect.width) + "px");
+    spacer.style.setProperty("--mobile-pin-height",mapHeight + "px");
+
+    if(before){
+      sticky.classList.remove("mobile-fixed","mobile-past");
+      spacer.classList.remove("active");
+    }else if(past){
+      sticky.classList.remove("mobile-fixed");
+      sticky.classList.add("mobile-past");
+      spacer.classList.add("active");
+    }else{
+      sticky.classList.remove("mobile-past");
+      sticky.classList.add("mobile-fixed");
+      spacer.classList.add("active");
+    }
+
+    var activationLine = pinTop + mapHeight + Math.min(100,window.innerHeight * .14);
+    var candidate = steps[0];
+    steps.forEach(function(step){
+      if(step.getBoundingClientRect().top <= activationLine) candidate = step;
+    });
+    activate(candidate);
+  }
+  function requestMobileStoryUpdate(){
+    if(!pinFrame) pinFrame = window.requestAnimationFrame(updateMobileStory);
+  }
+  window.addEventListener("scroll",requestMobileStoryUpdate,{passive:true});
+  window.addEventListener("resize",requestMobileStoryUpdate,{passive:true});
+  if(window.visualViewport){
+    window.visualViewport.addEventListener("resize",requestMobileStoryUpdate,{passive:true});
+    window.visualViewport.addEventListener("scroll",requestMobileStoryUpdate,{passive:true});
+  }
+  if(mobileQuery.addEventListener) mobileQuery.addEventListener("change",requestMobileStoryUpdate);
+  else mobileQuery.addListener(requestMobileStoryUpdate);
+  requestMobileStoryUpdate();
 })();
 
 /* ================= FAQ ================= */
