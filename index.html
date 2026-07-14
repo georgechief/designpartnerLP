@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Klints — The neutral governance layer above your ecommerce stack</title>
+<title>Klints | The neutral governance layer above your ecommerce stack</title>
 <meta name="description" content="Klints is the neutral ecommerce data governance layer. It scores whether your stack's data can carry lifecycle revenue, repairs it through approved writeback, and hands validated workflow blueprints to the agent you already run. Founding cohort now open.">
-<meta property="og:title" content="Klints — Founding cohort for ecommerce data governance">
+<meta property="og:title" content="Klints | Founding cohort for ecommerce data governance">
 <meta property="og:description" content="Five ecommerce brands. Free MVP1 access. A real Data Consistency assessment of your stack as the first deliverable.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0D0E10">
@@ -138,7 +138,7 @@ header.site.scrolled{background:rgba(245,242,235,.92);backdrop-filter:blur(10px)
 .kv + .kv{margin-top:.8rem;padding-top:.8rem;border-top:1px dashed var(--stone)}
 .prob-close{margin-top:clamp(2.5rem,5vw,3.5rem);padding:1.75rem 2rem;background:var(--sand);border-left:3px solid var(--anchor);border-radius:0 var(--radius-lg) var(--radius-lg) 0;font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.55;max-width:820px}
 
-/* ============ The layer — scroll story ============ */
+/* ============ The layer: scroll story ============ */
 .layer-wrap{display:grid;grid-template-columns:5fr 6fr;gap:clamp(2rem,5vw,5rem);align-items:start}
 .layer-sticky{position:sticky;top:104px}
 .layer-diagram{background:var(--white);border:1px solid var(--stone);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:1.5rem}
@@ -259,7 +259,23 @@ header.site.scrolled{background:rgba(245,242,235,.92);backdrop-filter:blur(10px)
 
 /* ============ Footer ============ */
 footer.site{background:var(--ink);color:var(--sand);padding:clamp(3.5rem,7vw,5.5rem) 0 2.5rem;border-top:1px solid rgba(245,242,235,.12)}
-.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem}
+.founder-card{position:relative;overflow:hidden;display:grid;grid-template-columns:148px minmax(0,1fr);align-items:center;gap:clamp(1.5rem,4vw,3rem);margin-bottom:clamp(3rem,6vw,4.5rem);padding:clamp(1.5rem,3.5vw,2.5rem);border:1px solid rgba(245,242,235,.13);border-radius:26px;background:linear-gradient(135deg,rgba(245,242,235,.07),rgba(245,242,235,.025));box-shadow:inset 0 1px 0 rgba(255,255,255,.035)}
+.founder-card::after{content:"";position:absolute;right:-130px;top:-150px;width:380px;height:380px;border-radius:50%;background:rgba(31,58,95,.25);filter:blur(70px);pointer-events:none}
+.founder-photo-wrap{position:relative;z-index:1;width:148px;height:148px;border-radius:50%;padding:4px;background:linear-gradient(145deg,var(--spark),rgba(245,242,235,.15));box-shadow:0 18px 44px rgba(0,0,0,.3),0 0 32px rgba(255,91,61,.12)}
+.founder-photo{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 35%;border:4px solid var(--ink)}
+.founder-copy{position:relative;z-index:1}
+.founder-kicker{font:500 .67rem/1 var(--font-mono);letter-spacing:.15em;text-transform:uppercase;color:var(--spark)}
+.founder-copy h2{max-width:24ch;margin:.6rem 0 1rem;font-size:clamp(1.65rem,3vw,2.45rem);line-height:1.08;letter-spacing:-.035em}
+.founder-copy p{max-width:76ch;color:rgba(245,242,235,.66);font-size:.95rem;line-height:1.65}
+.founder-copy p+p{margin-top:.7rem}
+.founder-copy strong{color:var(--sand);font-weight:600}
+.founder-links{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.35rem}
+.founder-link{display:inline-flex;align-items:center;gap:.55rem;min-height:42px;padding:.62rem .85rem;border:1px solid rgba(245,242,235,.15);border-radius:10px;color:rgba(245,242,235,.82);font-size:.82rem;transition:color .2s var(--ease),border-color .2s var(--ease),background .2s var(--ease),transform .2s var(--ease)}
+.founder-link:hover{color:var(--white);border-color:rgba(255,91,61,.6);background:rgba(255,91,61,.08);transform:translateY(-2px)}
+.founder-link.linkedin{border-color:rgba(255,91,61,.35)}
+.founder-link img{width:23px;height:23px;flex:none;border-radius:50%}
+.founder-link .link-arrow{color:var(--spark);font-size:1rem}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2.5rem}
 .foot-brand svg{width:150px;height:auto;margin-bottom:1rem}
 .foot-brand .tag{color:rgba(245,242,235,.6);font-size:.95rem}
 .foot-col .fk{font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,242,235,.45);margin-bottom:1rem}
@@ -286,6 +302,8 @@ footer.site{background:var(--ink);color:var(--sand);padding:clamp(3.5rem,7vw,5.5
   .b-lg,.b-md{grid-column:span 1}
   .offer-grid,.offer-timeline{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
+  .founder-card{grid-template-columns:124px minmax(0,1fr)}
+  .founder-photo-wrap{width:124px;height:124px}
   .nav-links{position:fixed;top:72px;left:0;right:0;background:var(--sand);border-bottom:1px solid var(--stone);flex-direction:column;align-items:flex-start;padding:1.25rem clamp(1.25rem,5vw,4rem) 1.5rem;gap:1.1rem;display:none}
   .nav-links.openm{display:flex}
   .nav-toggle{display:block}
@@ -293,6 +311,12 @@ footer.site{background:var(--ink);color:var(--sand);padding:clamp(3.5rem,7vw,5.5
 @media (max-width:560px){
   .hero-visual,.prob-grid,.bento,.foot-grid{grid-template-columns:1fr}
   .step .snum{font-size:.7rem}
+  .founder-card{grid-template-columns:1fr;gap:1.25rem;padding:1.35rem;border-radius:20px}
+  .founder-photo-wrap{width:112px;height:112px}
+  .founder-copy h2{font-size:1.65rem}
+  .founder-copy p{font-size:.9rem}
+  .founder-links{display:grid;grid-template-columns:1fr}
+  .founder-link{width:100%}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
@@ -554,6 +578,33 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
 .hero-uc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem}.hero-uc-head small,.klio-message>small{display:block;font:500 .57rem/1.2 var(--font-mono);letter-spacing:.12em;color:rgba(245,242,235,.35)}.hero-uc-head strong{display:block;margin-top:.48rem;font-size:1.1rem}.hero-uc-head>span{display:flex;align-items:center;gap:.45rem;padding:.48rem .65rem;border:1px solid rgba(43,143,95,.2);border-radius:8px;background:rgba(43,143,95,.08);font:500 .54rem/1 var(--font-mono);color:#7dc99d}.hero-uc-head>span i{width:6px;height:6px;border-radius:50%;background:var(--good)}
 .hero-uc-grid{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.75fr);gap:1rem}.klio-stage,.klio-message{min-height:290px;border:1px solid rgba(245,242,235,.1);border-radius:20px;background:linear-gradient(145deg,rgba(245,242,235,.055),rgba(245,242,235,.018))}.klio-stage{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}.klio-stage::before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:rgba(31,58,95,.2);filter:blur(34px)}.klio-orb{position:relative;width:190px;height:190px;display:grid;place-items:center}.klio-orb canvas{position:relative;z-index:2;width:100%;height:100%}.klio-orb>i{position:absolute;inset:20%;border-radius:50%;background:rgba(255,91,61,.12);filter:blur(20px);animation:klioBreathe 2.8s ease-in-out infinite}.klio-state{display:flex;align-items:center;gap:.45rem;font:500 .55rem/1 var(--font-mono);letter-spacing:.09em;color:rgba(245,242,235,.56)}.klio-state span{width:7px;height:7px;border-radius:50%;background:var(--spark);box-shadow:0 0 0 0 rgba(255,91,61,.5);animation:klioPing 1.8s infinite}.klio-wave{display:flex;align-items:center;height:22px;gap:3px;margin-top:.55rem}.klio-wave i{display:block;width:2px;height:5px;border-radius:2px;background:var(--spark);animation:klioWave .9s ease-in-out infinite}.klio-wave i:nth-child(2),.klio-wave i:nth-child(6){animation-delay:.1s}.klio-wave i:nth-child(3),.klio-wave i:nth-child(5){animation-delay:.2s}.klio-wave i:nth-child(4){animation-delay:.3s}@keyframes klioWave{50%{height:18px}}@keyframes klioBreathe{50%{transform:scale(1.16);opacity:.65}}@keyframes klioPing{70%{box-shadow:0 0 0 10px rgba(255,91,61,0)}}
 .klio-message{padding:clamp(1.4rem,3vw,2.2rem);display:flex;flex-direction:column;justify-content:center}.klio-message h3{max-width:20ch;margin:.85rem 0 .75rem;font-size:clamp(1.6rem,3vw,2.75rem);line-height:1.04;letter-spacing:-.035em}.klio-message h3 span{color:var(--spark)}.klio-message>p{max-width:55ch;color:rgba(245,242,235,.54);font-size:.9rem;line-height:1.55}.klio-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;margin-top:1.35rem}.klio-metrics>span{padding:.75rem;border-radius:11px;background:rgba(245,242,235,.035)}.klio-metrics small{display:block;font:500 .47rem/1 var(--font-mono);letter-spacing:.1em;color:rgba(245,242,235,.28)}.klio-metrics b{display:block;margin-top:.35rem;font-size:.68rem}.klio-metrics b.ready{color:#7dc99d}
+.klio-intro{display:flex;align-items:baseline;gap:.55rem;margin:0 0 .85rem;padding:.75rem 0;border-top:1px solid rgba(245,242,235,.08);border-bottom:1px solid rgba(245,242,235,.08)}
+.klio-intro span{font:500 .6rem/1 var(--font-mono);letter-spacing:.13em;text-transform:uppercase;color:var(--spark)}
+.klio-intro strong{font-size:1.05rem;color:rgba(245,242,235,.88)}
+.klio-speech-unit{visibility:hidden}
+.hero-uc-app.speech-ready .klio-speech-unit{visibility:visible}
+.klio-message h3 .klio-utterance{display:block;color:var(--sand)}
+.klio-message h3 .klio-utterance.accent{color:var(--spark)}
+.klio-message .klio-detail{display:inline}
+.klio-word{display:inline-block;white-space:nowrap}
+.klio-char{display:inline-block;white-space:pre;visibility:hidden;opacity:0}
+.klio-message h3 .klio-word,.klio-message h3 .klio-char{color:inherit}
+.klio-char.shown{visibility:visible;opacity:1}
+.hero-uc-app.speech-complete .klio-char{visibility:visible;opacity:1}
+.hero-uc-app .klio-metrics{opacity:0;transform:translateY(8px)}
+.hero-uc-app.speech-complete .klio-metrics{opacity:1;transform:none}
+.klio-wave i{animation-play-state:paused}
+.klio-wave{transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.hero-uc-app.speaking .klio-wave i{animation-play-state:running}
+.hero-uc-app.speech-complete .klio-wave{opacity:0;transform:scaleX(.6)}
+.hero-uc-app.speaking .klio-orb>i{animation:klioVoiceGlow .68s ease-in-out infinite alternate}
+.klio-state b{font:inherit;font-weight:500}
+.klio-ready-label{display:none;align-items:center;gap:.42rem;color:var(--sand)}
+.klio-ready-label svg{width:13px;height:13px;stroke:var(--spark)}
+.hero-uc-app.speech-complete .klio-speaking-label,.hero-uc-app.speech-complete .klio-status-dot{display:none}
+.hero-uc-app.speech-complete .klio-ready-label{display:flex}
+@keyframes klioSpeechIn{to{opacity:1;transform:none;filter:none}}
+@keyframes klioVoiceGlow{to{transform:scale(1.35);opacity:.82;background:rgba(255,91,61,.24);box-shadow:0 0 42px rgba(255,91,61,.26)}}
 .hero-uc-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:1rem}.hero-uc-flow>span{position:relative;padding:.8rem .8rem .8rem 2.6rem;border:1px solid rgba(245,242,235,.08);border-radius:12px;background:rgba(245,242,235,.025)}.hero-uc-flow>span:not(:last-child)::after{content:"";position:absolute;top:50%;right:-.65rem;width:.65rem;height:1px;background:rgba(245,242,235,.15)}.hero-uc-flow i{position:absolute;left:.8rem;top:.8rem;width:20px;height:20px;display:grid;place-items:center;border-radius:50%;background:rgba(245,242,235,.06);font:500 .48rem/1 var(--font-mono);font-style:normal;color:rgba(245,242,235,.42)}.hero-uc-flow b,.hero-uc-flow small{display:block}.hero-uc-flow b{font-size:.65rem}.hero-uc-flow small{margin-top:.2rem;font-size:.52rem;color:rgba(245,242,235,.34)}.hero-uc-flow .done i{background:rgba(43,143,95,.14);color:#7dc99d}.hero-uc-flow .active{border-color:rgba(255,91,61,.35);box-shadow:0 0 24px rgba(255,91,61,.07)}.hero-uc-flow .active i{background:rgba(255,91,61,.15);color:var(--spark)}
 .demo-disclaimer{margin-top:.7rem;font-size:.7rem;line-height:1.45;color:rgba(245,242,235,.46);text-align:right}
 .demo-disclaimer.on-light{color:#77736d}
@@ -561,6 +612,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
 
 @media(max-width:960px){.hero{padding-bottom:15rem}.hero h1{max-width:14ch}.hero .lead{margin-top:3rem}.hero::after{height:190px}.hero-uc-grid{grid-template-columns:220px 1fr}.klio-message h3{font-size:clamp(1.55rem,4vw,2.35rem)}.hero-uc-flow{grid-template-columns:1fr 1fr}.hero-uc-flow>span:nth-child(2)::after{display:none}}
 @media(max-width:640px){.hero{padding-top:8.5rem;padding-bottom:13rem}.hero h1{max-width:none;font-size:clamp(2.55rem,12vw,4rem)}.hero .lead{margin-top:3.4rem;font-size:1rem}.hero::after{height:155px;background-position:34% 52%}.hero-visual{margin-top:3.5rem}.hero-uc-app{border-radius:20px}.hero-uc-top{height:42px}.hero-uc-top b{display:none}.hero-uc-shell{grid-template-columns:1fr}.hero-uc-nav{display:none}.hero-uc-main{padding:1rem}.hero-uc-head{display:block}.hero-uc-head>span{width:max-content;margin-top:.75rem}.hero-uc-grid{grid-template-columns:1fr}.klio-stage{min-height:190px}.klio-orb{width:135px;height:135px}.klio-message{min-height:0;padding:1.2rem}.klio-message h3{max-width:none;font-size:1.7rem}.klio-message>p{font-size:.82rem}.klio-metrics{grid-template-columns:1fr 1fr}.klio-metrics>span:last-child{grid-column:1/-1}.hero-uc-flow{grid-template-columns:1fr}.hero-uc-flow>span::after{display:none}.prob-close.prob-quote{padding-left:2.3rem}.prob-quote .quote-mark{font-size:4rem}.q-scorecard{grid-template-columns:1fr}.q-score{padding-bottom:1rem;border-right:0;border-bottom:1px solid var(--stone)}.q-domains{gap:.8rem}.q-domain{grid-template-columns:1fr 36px}.q-domain>i{grid-column:1/-1;grid-row:2}.q-domain em{grid-column:2;grid-row:1}}
+@media(max-width:640px){.klio-intro{display:block}.klio-intro span,.klio-intro strong{display:block}.klio-intro strong{margin-top:.4rem;font-size:.95rem}}
 
 /* Mobile Klints layer: iOS-safe pinned architecture mini-map */
 @media(max-width:640px){
@@ -605,15 +657,15 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
   .arch-map{height:228px}
   .step-list{padding-bottom:calc(228px + 1.5rem)}
 }
-@media(prefers-reduced-motion:reduce){.klio-orb>i,.klio-state span,.klio-wave i{animation:none}}
+@media(prefers-reduced-motion:reduce){.klio-orb>i,.klio-state span,.klio-wave i{animation:none}.hero-uc-app.speaking .klio-char,.hero-uc-app.speaking .klio-metrics{animation:none;visibility:visible;opacity:1;transform:none;filter:none}}
 </style>
 </head>
 <body>
-<noscript><style>.hero .eyebrow,.hero .lead,.hero .cta-row,.hero .hero-note,.hero h1 .w,.fcard,.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<noscript><style>.hero .eyebrow,.hero .lead,.hero .cta-row,.hero .hero-note,.hero h1 .w,.fcard,.reveal,.klio-speech-unit,.klio-metrics{opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important}</style></noscript>
 <header class="site" id="siteHeader">
   <div class="container nav">
     <a class="logo" href="#top" aria-label="Klints home">
-      <!-- Asset A — Wordmark Dark (canonical) -->
+      <!-- Asset A: Wordmark Dark (canonical) -->
       <svg viewBox="0 0 750 232" width="750" height="232" version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
         <g transform="matrix(1,0,0,1,-225.871722,-166.808789)">
           <g transform="matrix(0.640149,0,0,0.640149,104.911391,135.234006)">
@@ -664,15 +716,16 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
           <aside class="hero-uc-nav" aria-hidden="true"><div>K<span></span></div><i>⌂</i><i class="active">◉</i><i>↗</i><i>✓</i></aside>
           <div class="hero-uc-main">
             <div class="hero-uc-head"><div><small>USE-CASE 02 · UNTAPPED SEGMENT</small><strong>Revenue opportunity · ready to build</strong></div><span><i></i> Data consistency 73 · cleared</span></div>
+            <div class="klio-intro"><span>Meet Klio</span><strong>Your stack orchestrator.</strong></div>
             <div class="hero-uc-grid">
-              <div class="klio-stage"><div class="klio-orb"><canvas id="heroKlioOrb" width="360" height="360" aria-hidden="true"></canvas><i></i></div><div class="klio-state"><span></span>Klio · speaking</div><div class="klio-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-              <div class="klio-message"><small>KLIO · LIFECYCLE ARCHITECT</small><h3>I found a revenue opportunity. <span>1,247 repeat buyers</span> have no active workflow.</h3><p>That is €46K per quarter sitting idle. The data is ready, so no repair is required.</p><div class="klio-metrics"><span><small>OPPORTUNITY</small><b>€46K / quarter</b></span><span><small>SEGMENT</small><b>repeat_no_loyalty</b></span><span><small>READINESS</small><b class="ready">Ready to build</b></span></div></div>
+              <div class="klio-stage"><div class="klio-orb"><canvas id="heroKlioOrb" width="360" height="360" aria-hidden="true"></canvas><i></i></div><div class="klio-state"><span class="klio-status-dot"></span><b class="klio-speaking-label">Klio · speaking</b><b class="klio-ready-label"><svg viewBox="0 0 16 16" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.25" y="1.75" width="5.5" height="8.25" rx="2.75"/><path d="M3.25 7.75a4.75 4.75 0 009.5 0M8 12.5v2M5.75 14.5h4.5"/></svg>Ask Klio</b></div><div class="klio-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+              <div class="klio-message"><small>KLIO · LIFECYCLE ARCHITECT</small><h3 aria-label="I found a revenue opportunity. 1,247 repeat buyers have no active workflow."><span class="klio-utterance klio-speech-unit">I found a revenue opportunity.</span><span class="klio-utterance klio-speech-unit accent">1,247 repeat buyers</span><span class="klio-utterance klio-speech-unit">have no active workflow.</span></h3><p aria-label="That is €46K per quarter sitting idle. The data is ready, so no repair is required."><span class="klio-detail klio-speech-unit">That is €46K per quarter sitting idle.</span> <span class="klio-detail klio-speech-unit">The data is ready, so no repair is required.</span></p><div class="klio-metrics"><span><small>OPPORTUNITY</small><b>€46K / quarter</b></span><span><small>SEGMENT</small><b>repeat_no_loyalty</b></span><span><small>READINESS</small><b class="ready">Ready to build</b></span></div></div>
             </div>
             <div class="hero-uc-flow"><span class="done"><i>✓</i><b>Opportunity found</b><small>1,247 buyers</small></span><span class="done"><i>✓</i><b>Data verified</b><small>DCS 73</small></span><span class="active"><i>03</i><b>Blueprint prepared</b><small>Second Purchase Accelerator</small></span><span><i>04</i><b>Agent handoff</b><small>MCP / A2A</small></span></div>
           </div>
         </div>
       </div>
-      <p class="demo-disclaimer">Demo tenant · Lumera Skin. Illustrative use case from the Klints demo environment — not a client's results.</p>
+      <p class="demo-disclaimer">Demo tenant · Lumera Skin. Illustrative use case from the Klints demo environment, not a client's results.</p>
     </div>
   </div>
 </section>
@@ -705,17 +758,17 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
     <div class="sec-head reveal">
       <div class="eyebrow">The silent leak</div>
       <h2>Your stack looks complete on a logo wall. <span class="coral-text">Your lifecycle</span> revenue says otherwise.</h2>
-      <p class="lead">Each system in a mid-size ecommerce stack does its job well. The leak sits between them — in the layer nobody owns.</p>
+      <p class="lead">Each system in a mid-size ecommerce stack does its job well. The leak sits between them, in the layer nobody owns.</p>
     </div>
     <div class="prob-grid">
       <div class="prob-card reveal"><h3><span class="sys-ic"><svg viewBox="0 0 16 16" fill="none" stroke="#1F3A5F" stroke-width="1.4"><rect x="2" y="3" width="12" height="10" rx="1.5"/><path d="M2 6.5h12M5.5 9.5h5"/></svg></span>Marketing automation</h3><div class="kv"><span class="k">Knows</span>Profiles, behavior, audiences, sending.</div><div class="kv"><span class="k">Can't see</span>Unified identity, lifecycle coverage in other channels, acquisition context, ERP economics, inventory and product constraints.</div></div>
-      <div class="prob-card reveal d1"><h3><span class="sys-ic"><svg viewBox="0 0 16 16" fill="none" stroke="#1F3A5F" stroke-width="1.4"><path d="M3 4h10l-1 8H4L3 4zM6 4V3a2 2 0 014 0v1"/></svg></span>Commerce platform</h3><div class="kv"><span class="k">Knows</span>Orders, products, checkout — transactional truth.</div><div class="kv"><span class="k">Can't see</span>Identity beyond the order, consent and channel engagement, acquisition pressure, lifecycle stage, active workflows or ERP rules.</div></div>
+      <div class="prob-card reveal d1"><h3><span class="sys-ic"><svg viewBox="0 0 16 16" fill="none" stroke="#1F3A5F" stroke-width="1.4"><path d="M3 4h10l-1 8H4L3 4zM6 4V3a2 2 0 014 0v1"/></svg></span>Commerce platform</h3><div class="kv"><span class="k">Knows</span>Orders, products and checkout: transactional truth.</div><div class="kv"><span class="k">Can't see</span>Identity beyond the order, consent and channel engagement, acquisition pressure, lifecycle stage, active workflows or ERP rules.</div></div>
       <div class="prob-card reveal d2"><h3><span class="sys-ic"><svg viewBox="0 0 16 16" fill="none" stroke="#1F3A5F" stroke-width="1.4"><rect x="2.5" y="2.5" width="11" height="11" rx="1.5"/><path d="M2.5 7h11M7 7v6.5"/></svg></span>ERP</h3><div class="kv"><span class="k">Knows</span>Margin, cost, inventory, pricing rules.</div><div class="kv"><span class="k">Can't see</span>Behavioral intent, consent and engagement, campaign exposure, channel pressure, attribution, lifecycle stage or workflow coverage.</div></div>
       <div class="prob-card reveal"><h3><span class="sys-ic"><svg viewBox="0 0 16 16" fill="none" stroke="#1F3A5F" stroke-width="1.4"><path d="M2.5 13.5v-5M8 13.5V2.5M13.5 13.5V7"/></svg></span>Analytics</h3><div class="kv"><span class="k">Knows</span>Onsite behavior, acquisition paths, attribution.</div><div class="kv"><span class="k">Can't see</span>A governed customer identity, live consent and lifecycle state, workflow eligibility, collisions, inventory context or activation readiness.</div></div>
       <div class="prob-card reveal d1"><h3><span class="sys-ic"><svg viewBox="0 0 16 16" fill="none" stroke="#1F3A5F" stroke-width="1.4"><circle cx="8" cy="8" r="5.5"/><circle cx="8" cy="8" r="2"/></svg></span>Paid media</h3><div class="kv"><span class="k">Knows</span>Spend, CAC, audience pressure, creative performance.</div><div class="kv"><span class="k">Can't see</span>Owned-channel activity, consent, lifecycle stage, active workflows, replenishment and winback timing, or product and inventory context.</div></div>
       <div class="prob-card reveal d2"><h3><span class="sys-ic"><svg viewBox="0 0 16 16" fill="none" stroke="#1F3A5F" stroke-width="1.4"><circle cx="8" cy="5" r="2.5"/><path d="M3 13.5c.6-2.6 2.6-4 5-4s4.4 1.4 5 4"/></svg></span>Your team</h3><div class="kv"><span class="k">Owns</span>Campaign cadence, brand voice, tactical execution.</div><div class="kv"><span class="k">Shouldn't have to own</span>Live cross-stack mapping, drift detection, identity resolution, collision checks, readiness gates, QA evidence and agent handoffs.</div></div>
     </div>
-    <blockquote class="prob-close prob-quote reveal"><span class="quote-mark">“</span><h2>Every system is doing its job. What is missing is the <em>architecture between them.</em></h2><p>Klints exists to own that neutral layer — continuously, across the stack.</p></blockquote>
+    <blockquote class="prob-close prob-quote reveal"><span class="quote-mark">“</span><h2>Every system is doing its job. What is missing is the <em>architecture between them.</em></h2><p>Klints exists to own that neutral layer continuously, across the stack.</p></blockquote>
   </div>
 </section>
 
@@ -725,7 +778,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
     <div class="sec-head reveal">
       <div class="eyebrow">The Klints layer</div>
       <h2>Klints governs. Your platform and its agent execute.</h2>
-      <p class="lead">A clear division of labour: Klints supplies cross-stack context, integrity scoring, and validated blueprints — then hands execution to the agent inside the platform you already run.</p>
+      <p class="lead">A clear division of labour: Klints supplies cross-stack context, integrity scoring and validated blueprints, then hands execution to the agent inside the platform you already run.</p>
     </div>
     <div class="layer-wrap">
       <div class="layer-sticky reveal">
@@ -759,11 +812,11 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
         </div>
       </div>
       <div class="step-list" id="stepList">
-        <div class="step" data-lights="n-ma,n-com,n-erp|f-in1,f-in2,f-in3"><div class="snum">Step 01 · Connect</div><h3>Read-only connections. A canonical model.</h3><p>Klints connects to your marketing automation, commerce, and — where available — ERP systems through read-only APIs, and unifies what it finds into the <span class="mono">klints_</span> canonical data model. Nothing in your stack changes owner.</p></div>
+        <div class="step" data-lights="n-ma,n-com,n-erp|f-in1,f-in2,f-in3"><div class="snum">Step 01 · Connect</div><h3>Read-only connections. A canonical model.</h3><p>Klints connects to your marketing automation, commerce and, where available, ERP systems through read-only APIs. It unifies what it finds into the <span class="mono">klints_</span> canonical data model. Nothing in your stack changes owner.</p></div>
         <div class="step" data-lights="n-score|f-in1,f-in2,f-in3"><div class="snum">Step 02 · Score</div><h3>The Data Consistency Score.</h3><p>Deterministic checks plus drift detection across identity, margin, segment, and campaign dimensions produce one hard number: is this stack ready to carry lifecycle revenue, and if not, exactly where does it break.</p></div>
         <div class="step" data-lights="n-fix"><div class="snum">Step 03 · Repair</div><h3>Data Fix Blueprints. You approve every write.</h3><p>For each integrity issue, Klints produces a system-by-system repair plan and executes the fix through writeback that you review and approve. No silent changes, full audit trail, rollback available.</p></div>
-        <div class="step" data-lights="n-bp,n-qa|f-mid"><div class="snum">Step 04 · Blueprint &amp; QA</div><h3>Implementation-ready workflows, validated before launch.</h3><p>Workflow blueprints cover data requirements, channels, offer economics, and measurement — then pass QA gates that check logic, margin safety, and consent before anything ships.</p></div>
-        <div class="step" data-lights="n-gate,n-agent|f-out"><div class="snum">Step 05 · Handoff</div><h3>Your agent executes. Klints stands behind it.</h3><p>Validated specs pass the readiness gate and hand off to the agent inside your platform over MCP/A2A — including Manago.ai, where the handoff is confirmed live. The better your agent becomes, the more this layer is worth.</p></div>
+        <div class="step" data-lights="n-bp,n-qa|f-mid"><div class="snum">Step 04 · Blueprint &amp; QA</div><h3>Implementation-ready workflows, validated before launch.</h3><p>Workflow blueprints cover data requirements, channels, offer economics and measurement. They then pass QA gates that check logic, margin safety and consent before anything ships.</p></div>
+        <div class="step" data-lights="n-gate,n-agent|f-out"><div class="snum">Step 05 · Handoff</div><h3>Your agent executes. Klints stands behind it.</h3><p>Validated specs pass the readiness gate and hand off to the agent inside your platform over MCP/A2A, including Manago.ai, where the handoff is confirmed live. The better your agent becomes, the more this layer is worth.</p></div>
       </div>
     </div>
   </div>
@@ -786,14 +839,14 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
           </svg>
           <div class="dial-num"><div class="n" id="bigNum">0</div><div class="d" id="bigDelta">▲ +27 after repair</div></div>
         </div>
-        <div class="dcs-note">Demo tenant · Lumera Skin. Illustrative use case from the Klints demo environment — not a client's results. Your number is what the founding cohort assessment establishes.</div>
+        <div class="dcs-note">Demo tenant · Lumera Skin. Illustrative use case from the Klints demo environment, not a client's results. Your number is what the founding cohort assessment establishes.</div>
       </div>
       <div class="dim-list reveal d1">
         <button class="dim" data-fill="88"><div class="dim-top"><span class="dim-name">Identity</span><span class="dim-val" data-to="88">0</span></div><div class="bar"><i></i></div><div class="dim-desc">Duplicate and orphaned profiles, identity resolution across commerce and marketing systems, consent state alignment.</div></button>
-        <button class="dim" data-fill="92"><div class="dim-top"><span class="dim-name">Margin</span><span class="dim-val" data-to="92">0</span></div><div class="bar"><i></i></div><div class="dim-desc">Whether ERP margin and cost reality is visible where campaigns are decided — so growth doesn't quietly trade margin for volume.</div></button>
-        <button class="dim" data-fill="95"><div class="dim-top"><span class="dim-name">Segment</span><span class="dim-val" data-to="95">0</span></div><div class="bar"><i></i></div><div class="dim-desc">Whether lifecycle stages and value bands exist as live properties on profiles — not in spreadsheets and slide decks.</div></button>
-        <button class="dim" data-fill="90"><div class="dim-top"><span class="dim-name">Campaign</span><span class="dim-val" data-to="90">0</span></div><div class="bar"><i></i></div><div class="dim-desc">Whether workflows can be traced to consistent data inputs and measured outcomes — so underperformance has a findable cause.</div></button>
-        <p class="dcs-note" style="margin-top:.5rem">Tap a dimension to see what it checks. Deterministic checks plus drift detection — the score moves when your data does.</p>
+        <button class="dim" data-fill="92"><div class="dim-top"><span class="dim-name">Margin</span><span class="dim-val" data-to="92">0</span></div><div class="bar"><i></i></div><div class="dim-desc">Whether ERP margin and cost reality is visible where campaigns are decided, so growth doesn't quietly trade margin for volume.</div></button>
+        <button class="dim" data-fill="95"><div class="dim-top"><span class="dim-name">Segment</span><span class="dim-val" data-to="95">0</span></div><div class="bar"><i></i></div><div class="dim-desc">Whether lifecycle stages and value bands exist as live properties on profiles rather than in spreadsheets and slide decks.</div></button>
+        <button class="dim" data-fill="90"><div class="dim-top"><span class="dim-name">Campaign</span><span class="dim-val" data-to="90">0</span></div><div class="bar"><i></i></div><div class="dim-desc">Whether workflows can be traced to consistent data inputs and measured outcomes, so underperformance has a findable cause.</div></button>
+        <p class="dcs-note" style="margin-top:.5rem">Tap a dimension to see what it checks. Deterministic checks plus drift detection keep the score moving when your data does.</p>
       </div>
     </div>
   </div>
@@ -807,12 +860,12 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
       <h2>Six capabilities. One governed loop.</h2>
     </div>
     <div class="bento">
-      <div class="bcard b-lg reveal"><div class="bic"><svg viewBox="0 0 18 18" fill="none" stroke="#1F3A5F" stroke-width="1.5"><circle cx="9" cy="9" r="7"/><path d="M9 5v4l2.5 2.5"/></svg></div><h3>Data Consistency Score</h3><p>A hard, evidence-based readiness number across identity, margin, segment, and campaign dimensions — with drift detection so it stays honest over time.</p><span class="mono-chip">klints_dcs_score</span></div>
+      <div class="bcard b-lg reveal"><div class="bic"><svg viewBox="0 0 18 18" fill="none" stroke="#1F3A5F" stroke-width="1.5"><circle cx="9" cy="9" r="7"/><path d="M9 5v4l2.5 2.5"/></svg></div><h3>Data Consistency Score</h3><p>A hard, evidence-based readiness number across identity, margin, segment and campaign dimensions, with drift detection to keep it honest over time.</p><span class="mono-chip">klints_dcs_score</span></div>
       <div class="bcard b-md reveal d1"><div class="bic"><svg viewBox="0 0 18 18" fill="none" stroke="#1F3A5F" stroke-width="1.5"><path d="M3 15L15 3M3 3h5v5M15 15h-5v-5"/></svg></div><h3>Data Fix Blueprint</h3><p>System-by-system repair plans for the activation layer, executed through writeback you approve.</p><span class="mono-chip">human-approved</span></div>
       <div class="bcard b-md reveal d2"><div class="bic"><svg viewBox="0 0 18 18" fill="none" stroke="#1F3A5F" stroke-width="1.5"><rect x="2.5" y="2.5" width="13" height="13" rx="2"/><path d="M6 9h6M9 6v6"/></svg></div><h3>Workflow Blueprint Studio</h3><p>Implementation-ready specs covering data, channel, offer economics, ERP constraints, and measurement.</p><span class="mono-chip">per use case</span></div>
-      <div class="bcard b-md reveal"><div class="bic"><svg viewBox="0 0 18 18" fill="none" stroke="#1F3A5F" stroke-width="1.5"><path d="M3 9.5l4 4L15 5"/></svg></div><h3>QA Validation</h3><p>Logic, copy, offer economics, consent, and measurement checked before launch — the gate broken workflows don't pass.</p><span class="mono-chip">4 gates</span></div>
-      <div class="bcard b-md reveal d1"><div class="bic"><svg viewBox="0 0 18 18" fill="none" stroke="#1F3A5F" stroke-width="1.5"><path d="M6 9h6M12 9l-2.5-2.5M12 9l-2.5 2.5"/><circle cx="4" cy="9" r="2"/><circle cx="14" cy="9" r="2"/></svg></div><h3>Agent Handoff</h3><p>Structured specs delivered to the agent in your platform over MCP/A2A — with blueprint plus REST triggers where agents aren't live yet.</p><span class="mono-chip">MCP/A2A</span></div>
-      <div class="bcard b-lg reveal d2"><div class="bic"><svg viewBox="0 0 18 18" fill="none" stroke="#1F3A5F" stroke-width="1.5"><path d="M2.5 14.5v-4M7 14.5v-7M11.5 14.5v-9M16 14.5v-12" stroke-linecap="round"/></svg></div><h3>Opportunity Tracker</h3><p>Every integrity issue ranked by severity and projected revenue impact, every fix tracked to outcome — so governance shows up on the P&amp;L, not just in an audit document.</p><span class="mono-chip">ranked by impact</span></div>
+      <div class="bcard b-md reveal"><div class="bic"><svg viewBox="0 0 18 18" fill="none" stroke="#1F3A5F" stroke-width="1.5"><path d="M3 9.5l4 4L15 5"/></svg></div><h3>QA Validation</h3><p>Logic, copy, offer economics, consent and measurement are checked before launch. Broken workflows do not pass the gate.</p><span class="mono-chip">4 gates</span></div>
+      <div class="bcard b-md reveal d1"><div class="bic"><svg viewBox="0 0 18 18" fill="none" stroke="#1F3A5F" stroke-width="1.5"><path d="M6 9h6M12 9l-2.5-2.5M12 9l-2.5 2.5"/><circle cx="4" cy="9" r="2"/><circle cx="14" cy="9" r="2"/></svg></div><h3>Agent Handoff</h3><p>Structured specs are delivered to the agent in your platform over MCP/A2A, with blueprint plus REST triggers where agents aren't live yet.</p><span class="mono-chip">MCP/A2A</span></div>
+      <div class="bcard b-lg reveal d2"><div class="bic"><svg viewBox="0 0 18 18" fill="none" stroke="#1F3A5F" stroke-width="1.5"><path d="M2.5 14.5v-4M7 14.5v-7M11.5 14.5v-9M16 14.5v-12" stroke-linecap="round"/></svg></div><h3>Opportunity Tracker</h3><p>Every integrity issue is ranked by severity and projected revenue impact, and every fix is tracked to outcome. Governance shows up on the P&amp;L, not just in an audit document.</p><span class="mono-chip">ranked by impact</span></div>
     </div>
   </div>
 </section>
@@ -824,7 +877,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
       <div class="sec-head">
         <div class="eyebrow">Inside the application</div>
         <h2>See the governed loop in motion.</h2>
-        <p class="lead">Not another reporting dashboard. Klints turns cross-stack evidence into the next governed action — with approval and validation built in.</p>
+        <p class="lead">Not another reporting dashboard. Klints turns cross-stack evidence into the next governed action, with approval and validation built in.</p>
       </div>
       <div class="preview-tabs" role="tablist" aria-label="Application previews">
         <button class="preview-tab active" role="tab" aria-selected="true" data-preview="score"><span>01</span>Score the stack</button>
@@ -863,7 +916,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
       </div>
       <div class="preview-progress" aria-hidden="true"><i></i></div>
     </div>
-    <p class="demo-disclaimer on-light reveal">Demo tenant · Lumera Skin. Illustrative use case from the Klints demo environment — not a client's results.</p>
+    <p class="demo-disclaimer on-light reveal">Demo tenant · Lumera Skin. Illustrative use case from the Klints demo environment, not a client's results.</p>
   </div>
 </section>
 
@@ -873,7 +926,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
     <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
       <div class="eyebrow">10-question self-check</div>
       <h2>Is your stack governed well enough to scale lifecycle revenue?</h2>
-      <p class="lead" style="margin-left:auto;margin-right:auto">Ten questions based on the problems lifecycle leaders face in production. Three minutes, no email required — with a design-partner fit signal at the end.</p>
+      <p class="lead" style="margin-left:auto;margin-right:auto">Ten questions based on the problems lifecycle leaders face in production. It takes three minutes, requires no email and provides a design-partner fit signal at the end.</p>
     </div>
     <div class="quiz-shell reveal" id="quiz">
       <div class="quiz-head"><span class="qh-title">Stack Integrity Check</span><span class="qh-step" id="qStep" role="status">Question 1 of 10</span></div>
@@ -889,9 +942,9 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
           <div class="q-band" id="rBand"></div>
           <h3 id="rTitle"></h3>
           <p id="rBody"></p>
-          <div class="q-scorecard"><div class="q-score"><strong id="rScore">—</strong><span>Stack integrity<br>indicator</span></div><div class="q-domains" id="rDomains"></div></div>
+          <div class="q-scorecard"><div class="q-score"><strong id="rScore">-</strong><span>Stack integrity<br>indicator</span></div><div class="q-domains" id="rDomains"></div></div>
           <div class="q-signal" id="rSignal"></div>
-          <p class="q-disclaim">This is an indicative profile, not a diagnosis. The founding cohort starts with the real thing — a full Data Consistency assessment of your connected stack.</p>
+          <p class="q-disclaim">This is an indicative profile, not a diagnosis. The founding cohort starts with the real thing: a full Data Consistency assessment of your connected stack.</p>
           <div class="cta-row"><a class="btn btn-anchor js-apply" href="https://form.typeform.com/to/TI2OjLZf" target="_blank" rel="noopener">Apply for the founding cohort →</a><button class="btn btn-ghost" id="qRestart">Retake the check</button></div>
         </div>
       </div>
@@ -904,33 +957,33 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
   <div class="container">
     <div class="sec-head reveal">
       <div class="eyebrow">The founding cohort</div>
-      <h2>Build the governance layer with us — on your real stack, at no cost through MVP1.</h2>
+      <h2>Build the governance layer with us on your real stack, at no cost through MVP1.</h2>
       <p class="lead">A founding cohort of five ecommerce brands works directly with the founding team through MVP1. The deal is deliberately two-sided.</p>
     </div>
     <div class="offer-grid">
       <div class="offer-col get reveal">
         <h3><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#1F3A5F" stroke-width="1.6" width="20" height="20"><path d="M4 10.5l4 4L16 6"/></svg>What you get</h3>
         <ul>
-          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#2E8857" stroke-width="1.6"><path d="M4 10.5l4 4L16 6"/></svg><span><b>A full Data Consistency assessment</b> of your connected stack — the first deliverable, with standalone value whether or not you continue.</span></li>
-          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#2E8857" stroke-width="1.6"><path d="M4 10.5l4 4L16 6"/></svg><span><b>Full MVP1 access, free through acceptance</b> — expected Q4 2026 — including scoring, fix blueprints, workflow blueprints, QA, and agent handoff.</span></li>
-          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#2E8857" stroke-width="1.6"><path d="M4 10.5l4 4L16 6"/></svg><span><b>Direct roadmap influence.</b> Your friction log sets build priority — founding partners shape what the category becomes.</span></li>
-          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#2E8857" stroke-width="1.6"><path d="M4 10.5l4 4L16 6"/></svg><span><b>Founding-partner pricing locked at launch</b> — confirmed in writing before MVP1 acceptance.</span></li>
-          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#2E8857" stroke-width="1.6"><path d="M4 10.5l4 4L16 6"/></svg><span><b>Founder-level onboarding</b> — you work with the people building the product, not a support queue.</span></li>
+          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#2E8857" stroke-width="1.6"><path d="M4 10.5l4 4L16 6"/></svg><span><b>A full Data Consistency assessment</b> of your connected stack. It is the first deliverable, with standalone value whether or not you continue.</span></li>
+          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#2E8857" stroke-width="1.6"><path d="M4 10.5l4 4L16 6"/></svg><span><b>Full MVP1 access, free through acceptance</b>, expected in Q4 2026, including scoring, fix blueprints, workflow blueprints, QA and agent handoff.</span></li>
+          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#2E8857" stroke-width="1.6"><path d="M4 10.5l4 4L16 6"/></svg><span><b>Direct roadmap influence.</b> Your friction log sets build priority. Founding partners shape what the category becomes.</span></li>
+          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#2E8857" stroke-width="1.6"><path d="M4 10.5l4 4L16 6"/></svg><span><b>Founding-partner pricing locked at launch</b>, confirmed in writing before MVP1 acceptance.</span></li>
+          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#2E8857" stroke-width="1.6"><path d="M4 10.5l4 4L16 6"/></svg><span><b>Founder-level onboarding:</b> you work with the people building the product, not a support queue.</span></li>
         </ul>
       </div>
       <div class="offer-col reveal d1">
         <h3><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#1F3A5F" stroke-width="1.6" width="20" height="20"><circle cx="10" cy="10" r="7"/><path d="M10 6.5v4l2.5 1.5"/></svg>What you commit</h3>
         <ul>
           <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#9C9A92" stroke-width="1.6"><path d="M10 4v12M4 10h12"/></svg><span><b>Sandbox or read-only access</b> to your marketing platform and commerce data, so the assessment runs on reality instead of assumptions.</span></li>
-          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#9C9A92" stroke-width="1.6"><path d="M10 4v12M4 10h12"/></svg><span><b>One 30-minute feedback session every two weeks</b> — the friction log that steers the build.</span></li>
-          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#9C9A92" stroke-width="1.6"><path d="M10 4v12M4 10h12"/></svg><span><b>Openness to a named case study at launch</b> — optional, and never a condition of participation.</span></li>
+          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#9C9A92" stroke-width="1.6"><path d="M10 4v12M4 10h12"/></svg><span><b>One 30-minute feedback session every two weeks</b> to maintain the friction log that steers the build.</span></li>
+          <li><svg class="oi" viewBox="0 0 20 20" fill="none" stroke="#9C9A92" stroke-width="1.6"><path d="M10 4v12M4 10h12"/></svg><span><b>Openness to a named case study at launch.</b> It is optional and never a condition of participation.</span></li>
         </ul>
-        <p class="offer-fact">Cohort size is capped at five so every partner's stack gets founder attention. Fit matters more than speed — we select for ICP match, not first-come.</p>
+        <p class="offer-fact">Cohort size is capped at five so every partner's stack gets founder attention. Fit matters more than speed; we select for ICP match, not first-come.</p>
       </div>
     </div>
     <div class="offer-timeline reveal">
       <div class="tl-step"><div class="tk">Now</div><div class="tv">Apply &amp; connect</div><div class="td">Short application, fit call, sandbox connection, Data Consistency assessment.</div></div>
-      <div class="tl-step"><div class="tk">Through Q4 2026</div><div class="tv">Build on your stack</div><div class="td">MVP1 milestones run against your real data — free through acceptance, biweekly feedback loop.</div></div>
+      <div class="tl-step"><div class="tk">Through Q4 2026</div><div class="tv">Build on your stack</div><div class="td">MVP1 milestones run against your real data, free through acceptance, with a biweekly feedback loop.</div></div>
       <div class="tl-step"><div class="tk">At launch</div><div class="tv">Founding terms</div><div class="td">Pricing lock, roadmap influence continues, optional case study.</div></div>
     </div>
   </div>
@@ -944,12 +997,12 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
       <h2>The fine print, in plain language.</h2>
     </div>
     <div class="faq-wrap reveal">
-      <div class="faq-item"><button class="faq-q">Does Klints replace our marketing platform or its agent?<span class="chev">▾</span></button><div class="faq-a"><p>No — and it's structural, not polite positioning. Klints is a division of labour: it supplies cross-stack context, integrity scoring, and validated blueprints; your platform and its agent execute. Your current stack keeps doing exactly what it does today — Klints governs the layer above it that no single system can own.</p></div></div>
-      <div class="faq-item"><button class="faq-q">What access does Klints need?<span class="chev">▾</span></button><div class="faq-a"><p>Read-only API connections to your marketing platform, commerce system, and — where available — ERP. Writeback is a separate, scoped permission, and every individual write is reviewed and approved by you, with a full audit trail and rollback.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Does Klints replace our marketing platform or its agent?<span class="chev">▾</span></button><div class="faq-a"><p>No. This is structural, not polite positioning. Klints is a division of labour: it supplies cross-stack context, integrity scoring and validated blueprints; your platform and its agent execute. Your current stack keeps doing exactly what it does today. Klints governs the layer above it that no single system can own.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What access does Klints need?<span class="chev">▾</span></button><div class="faq-a"><p>Read-only API connections to your marketing platform, commerce system and, where available, ERP. Writeback is a separate, scoped permission, and every individual write is reviewed and approved by you, with a full audit trail and rollback.</p></div></div>
       <div class="faq-item"><button class="faq-q">What does the founding cohort actually cost?<span class="chev">▾</span></button><div class="faq-a"><p>Nothing through MVP1 acceptance, expected Q4 2026. Your investment is access and attention: sandbox connection plus a 30-minute feedback session every two weeks. Founding-partner pricing for after launch is locked in writing before acceptance, so there is no surprise on the other side.</p></div></div>
       <div class="faq-item"><button class="faq-q">Where does our data live, and what about GDPR?<span class="chev">▾</span></button><div class="faq-a"><p>Klints is operated by COMENIUS Agency s.r.o., based in Prague, with EU data processing. Data-processing terms are provided and signed during onboarding, before any connection is made.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Do we need an ERP connected on day one?<span class="chev">▾</span></button><div class="faq-a"><p>No. Klints scores whatever is connected — marketing platform plus commerce is a complete starting point. Connecting ERP later raises the value ceiling, because margin and inventory reality is where the most expensive blind spots usually sit.</p></div></div>
-      <div class="faq-item"><button class="faq-q">What happens after MVP1?<span class="chev">▾</span></button><div class="faq-a"><p>Founding partners keep their pricing lock and roadmap influence. The case study is optional. If Klints isn't earning its place in your stack by acceptance, you walk away with a completed data-consistency assessment and repaired activation data — both of which are yours.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do we need an ERP connected on day one?<span class="chev">▾</span></button><div class="faq-a"><p>No. Klints scores whatever is connected; marketing platform plus commerce is a complete starting point. Connecting ERP later raises the value ceiling, because margin and inventory reality is where the most expensive blind spots usually sit.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What happens after MVP1?<span class="chev">▾</span></button><div class="faq-a"><p>Founding partners keep their pricing lock and roadmap influence. The case study is optional. If Klints isn't earning its place in your stack by acceptance, you walk away with a completed data-consistency assessment and repaired activation data. Both are yours.</p></div></div>
     </div>
   </div>
 </section>
@@ -959,7 +1012,7 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
   <div class="container">
     <div class="eyebrow reveal">The thesis</div>
     <div class="thesis-line reveal d1">The better the AI in your ecommerce martech stack becomes, the more a <span class="thesis-accent">neutral data governance layer matters.</span></div>
-    <p class="thesis-sub reveal d2">Agents execute what the data lets them see. A system of record cannot be the neutral arbiter of its own integrity — Klints is not a system of record, and that is the point. Five founding partners get to build this layer around their own stack.</p>
+    <p class="thesis-sub reveal d2">Agents execute what the data lets them see. A system of record cannot be the neutral arbiter of its own integrity. Klints is not a system of record, and that is the point. Five founding partners get to build this layer around their own stack.</p>
     <div class="cta-row reveal d3" style="margin-top:2.4rem">
       <a class="btn btn-spark js-apply" href="https://form.typeform.com/to/TI2OjLZf" target="_blank" rel="noopener">Apply for the founding cohort →</a>
       <a class="btn btn-ghost-light" href="#layer">Re-read how it works</a>
@@ -973,9 +1026,25 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
 <!-- ============ FOOTER ============ -->
 <footer class="site">
   <div class="container">
+    <section class="founder-card reveal" aria-labelledby="founderHeading">
+      <div class="founder-photo-wrap">
+        <img class="founder-photo" src="assets/jiri-sefler-founder.jpeg" alt="Jiří Šefler, founder of Klints" width="800" height="800" loading="lazy" decoding="async">
+      </div>
+      <div class="founder-copy">
+        <div class="founder-kicker">Meet the founder</div>
+        <h2 id="founderHeading">Built from nine years inside ecommerce martech.</h2>
+        <p><strong>Jiří Šefler is the founder of Klints</strong> and a martech practitioner with more than nine years of hands-on experience working with SALESmanago, now Manago.ai. His agency, AJ advert, has been a Diamond Partner since 2019.</p>
+        <p>Across ecommerce implementations, he kept seeing the same structural problem: brands invest in capable platforms, but fragmented data and missing governance prevent their martech stack from working as one system. He created Klints to give ecommerce teams a neutral data governance layer that makes the stack easier to operate while improving the efficiency and return on platforms such as Manago.ai.</p>
+        <div class="founder-links">
+          <a class="founder-link" href="https://partners.manago.ai/aj-advert" target="_blank" rel="noopener"><span>AJ advert · Manago.ai Diamond Partner</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="founder-link linkedin" href="https://www.linkedin.com/in/jiri-sefler/" target="_blank" rel="noopener"><img src="assets/linkedin-coral.png" alt="" width="680" height="680" loading="lazy" decoding="async"><span>Connect with Jiří on LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="founder-link" href="mailto:george@klints.io"><span>Email Jiří: george@klints.io</span></a>
+        </div>
+      </div>
+    </section>
     <div class="foot-grid">
       <div class="foot-brand">
-        <!-- Asset B — Wordmark Light (canonical) -->
+        <!-- Asset B: Wordmark Light (canonical) -->
         <svg viewBox="0 0 900 278" width="900" height="278" version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
           <g transform="matrix(1,0,0,1,-184.871722,-142.261108)">
             <g transform="matrix(0.747072,0,0,0.747072,74.050452,-372.097398)">
@@ -995,7 +1064,6 @@ header.site.scrolled .nav-links .btn-anchor:hover{background:var(--spark);color:
       </div>
       <div class="foot-col"><div class="fk">Product</div><a href="#layer">How it works</a><a href="#dcs">Data Consistency Score</a><a href="#capabilities">Capabilities</a><a href="#check">Stack Integrity Check</a></div>
       <div class="foot-col"><div class="fk">Founding cohort</div><a href="#offer">The offer</a><a href="#faq">FAQ</a><a class="js-apply" href="https://form.typeform.com/to/TI2OjLZf" target="_blank" rel="noopener">Apply</a></div>
-      <div class="foot-col"><div class="fk">Contact</div><a href="mailto:george@klints.io">Klints founder: george@klints.io</a></div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Klints.io. All information is confidential. Access is by invitation only.</span>
@@ -1093,6 +1161,34 @@ document.querySelectorAll(".reveal,.proof,.fcard").forEach(function(el){ io.obse
 (function(){
   var canvas = document.getElementById("heroKlioOrb");
   if(!canvas) return;
+  var app = canvas.closest(".hero-uc-app"), appVisible = false, speechPlayed = false, lastTypedAt = 0;
+  var speechChars = [];
+  app.querySelectorAll(".klio-speech-unit").forEach(function(unit){
+    var text = unit.textContent, fragment = document.createDocumentFragment(), unitStart = speechChars.length;
+    (text.match(/\S+|\s+/g) || []).forEach(function(token){
+      if(/^\s+$/.test(token)){
+        fragment.appendChild(document.createTextNode(token));
+        return;
+      }
+      var word = document.createElement("span");
+      word.className = "klio-word";
+      Array.from(token).forEach(function(character){
+        var charSpan = document.createElement("span");
+        charSpan.className = "klio-char";
+        charSpan.textContent = character;
+        word.appendChild(charSpan);
+        var pause = 50;
+        if(/[,.!?;:]/.test(character)) pause += character === "." || character === "!" || character === "?" ? 320 : 140;
+        speechChars.push({node:charSpan,pause:pause});
+      });
+      fragment.appendChild(word);
+    });
+    unit.textContent = "";
+    unit.setAttribute("aria-hidden","true");
+    unit.appendChild(fragment);
+    if(speechChars.length > unitStart) speechChars[speechChars.length-1].pause += 260;
+  });
+  app.classList.add("speech-ready");
   var ctx = canvas.getContext("2d"), points = [], count = 560, phi = Math.PI * (3 - Math.sqrt(5));
   for(var i=0;i<count;i++){
     var y = 1 - (i/(count-1))*2, radius = Math.sqrt(1-y*y), theta = phi*i;
@@ -1104,8 +1200,13 @@ document.querySelectorAll(".reveal,.proof,.fcard").forEach(function(el){ io.obse
     var dpr = Math.min(window.devicePixelRatio||1,2), w = canvas.clientWidth || 190, h = canvas.clientHeight || 190;
     if(canvas.width !== Math.round(w*dpr) || canvas.height !== Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr)}
     ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
-    angle += reduceMotion ? 0 : .0035;
-    var pulse = reduceMotion ? 1 : 1 + Math.sin(time*.0024)*.035, scale = Math.min(w,h)*.39*pulse, cx=w/2, cy=h/2;
+    var voice = 0;
+    if(lastTypedAt && app.classList.contains("speaking") && !reduceMotion){
+      var typedAge = time - lastTypedAt;
+      if(typedAge < 145) voice = Math.max(0,1-typedAge/145) * (.72 + Math.abs(Math.sin(time*.032))*.28);
+    }
+    angle += reduceMotion ? 0 : .0035 + voice*.0025;
+    var pulse = reduceMotion ? 1 : 1 + Math.sin(time*.0024)*.03 + voice*.13, scale = Math.min(w,h)*.39*pulse, cx=w/2, cy=h/2;
     points.forEach(function(p){
       var x = p.x*Math.cos(angle)-p.z*Math.sin(angle), z=p.x*Math.sin(angle)+p.z*Math.cos(angle);
       var tiltY=p.y*.965-z*.26, tiltZ=p.y*.26+z*.965, perspective=1.18/(1.7-tiltZ*.34);
@@ -1117,8 +1218,40 @@ document.querySelectorAll(".reveal,.proof,.fcard").forEach(function(el){ io.obse
     raf=requestAnimationFrame(draw);
   }
   function start(){if(!raf){running=true;raf=requestAnimationFrame(draw)}}
-  var orbObserver = new IntersectionObserver(function(entries){running=entries[0].isIntersecting;if(running)start()},{threshold:.05});
-  orbObserver.observe(canvas);start();
+  var charIndex = 0, typeTimer = 0;
+  function finishSpeech(){
+    app.classList.remove("speaking");
+    app.classList.add("speech-complete");
+  }
+  function typeNextCharacter(){
+    if(charIndex >= speechChars.length){
+      typeTimer = window.setTimeout(finishSpeech,420);
+      return;
+    }
+    var item = speechChars[charIndex++];
+    item.node.classList.add("shown");
+    lastTypedAt = performance.now();
+    typeTimer = window.setTimeout(typeNextCharacter,item.pause);
+  }
+  function beginSpeech(){
+    if(speechPlayed || !appVisible || window.scrollY < 12) return;
+    speechPlayed = true;
+    app.classList.add("speaking");
+    if(reduceMotion){
+      speechChars.forEach(function(item){item.node.classList.add("shown");});
+      typeTimer = window.setTimeout(finishSpeech,80);
+    }else{
+      typeTimer = window.setTimeout(typeNextCharacter,180);
+    }
+    window.removeEventListener("scroll",beginSpeech);
+  }
+  var orbObserver = new IntersectionObserver(function(entries){
+    appVisible = entries[0].isIntersecting;
+    running = appVisible;
+    if(running){start();beginSpeech();}
+  },{threshold:.28});
+  orbObserver.observe(app);
+  window.addEventListener("scroll",beginSpeech,{passive:true});
 })();
 
 /* Big DCS dial + dimension bars */
@@ -1349,23 +1482,23 @@ document.querySelectorAll(".faq-q").forEach(function(q){
 (function(){
   var QUESTIONS = [
     { topic:"01 · Tracking integrity", domain:"Data integrity", q:"A high-value automation reaches fewer customers than expected. How quickly can your team prove whether the failure sits in the event, consent state, server-side tracking, or the audience rule?",
-      opts:[["Within hours — coverage and trigger health are monitored",0],["Within days — after someone investigates across systems",1],["Usually only after performance drops; the cause stays uncertain",2]] },
+      opts:[["Within hours, because coverage and trigger health are monitored",0],["Within days, after someone investigates across systems",1],["Usually only after performance drops; the cause stays uncertain",2]] },
     { topic:"02 · Customer identity", domain:"Data integrity", q:"Could you show one reliable customer record across guest checkout, registered purchase, email engagement, and paid audiences today?",
-      opts:[["Yes — a persistent identity is governed across the stack",0],["For most customers, with exceptions and manual reconciliation",1],["No — each platform can hold a different version of the customer",2]] },
+      opts:[["Yes, a persistent identity is governed across the stack",0],["For most customers, with exceptions and manual reconciliation",1],["No, each platform can hold a different version of the customer",2]] },
     { topic:"03 · Flow governance", domain:"Decision governance", q:"When two automated flows and a campaign are eligible to reach the same customer, what decides which message wins?",
-      opts:[["A tested priority and suppression policy shared across channels",0],["Platform rules plus a campaign calendar and manual checks",1],["Whichever automation fires first — unless someone spots the collision",2]] },
-    { topic:"04 · Decision quality", domain:"Decision governance", q:"For every live lifecycle flow, can you name the customer decision it should change — and show that it creates incremental value rather than another reminder?",
-      opts:[["Yes — the decision, hypothesis and success measure are explicit",0],["For strategic flows; the long tail follows templates or best practice",1],["Mostly no — flows are built because an event or feature exists",2]] },
+      opts:[["A tested priority and suppression policy shared across channels",0],["Platform rules plus a campaign calendar and manual checks",1],["Whichever automation fires first, unless someone spots the collision",2]] },
+    { topic:"04 · Decision quality", domain:"Decision governance", q:"For every live lifecycle flow, can you name the customer decision it should change and show that it creates incremental value rather than another reminder?",
+      opts:[["Yes, the decision, hypothesis and success measure are explicit",0],["For strategic flows; the long tail follows templates or best practice",1],["Mostly no; flows are built because an event or feature exists",2]] },
     { topic:"05 · Root-cause diagnosis", domain:"Diagnostics & economics", q:"A workflow underperforms. Can your team isolate data, segment, trigger, timing, suppression, and creative before rebuilding it?",
-      opts:[["Yes — inputs and outcomes are traceable to a root cause",0],["Sometimes — it requires manual analysis and several people",1],["Rarely — we optimize the most visible part and hope it moves",2]] },
+      opts:[["Yes, inputs and outcomes are traceable to a root cause",0],["Sometimes; it requires manual analysis and several people",1],["Rarely; we optimize the most visible part and hope it moves",2]] },
     { topic:"06 · Acquisition economics", domain:"Diagnostics & economics", q:"How is the welcome incentive decided for a newly acquired customer?",
       opts:[["By acquisition source, customer context and expected economics",0],["We use a few variants, but governance is mostly manual",1],["A default discount drives conversion; downstream impact is unclear",2]] },
-    { topic:"07 · Next-best action", domain:"Orchestration & AI", q:"Once customer data reaches your warehouse or CDP, what turns it into the next best action — including what should be suppressed?",
+    { topic:"07 · Next-best action", domain:"Orchestration & AI", q:"Once customer data reaches your warehouse or CDP, what turns it into the next best action, including what should be suppressed?",
       opts:[["A live decision layer uses current state and cross-channel rules",0],["Selected use cases are activated; the rest depends on analysts or briefs",1],["The data supports reporting, but no system owns the decision",2]] },
     { topic:"08 · AI readiness", domain:"Orchestration & AI", q:"As AI makes campaigns and flows faster to produce, what prevents incomplete data or conflicting logic from reaching customers faster too?",
       opts:[["Automated readiness gates and QA evidence block unsafe execution",0],["A human checklist catches most issues before launch",1],["Controls vary by operator; speed is increasing faster than governance",2]] },
     { topic:"09 · Incrementality", domain:"Measurement & operating model", q:"If your CFO challenged the revenue attributed to lifecycle marketing tomorrow, how confidently could you separate platform-reported revenue from incremental impact?",
-      opts:[["Confidently — the methodology and inputs are defensible",0],["We could reconcile it, but only through a one-off analysis",1],["We rely mainly on platform attribution and directional trends",2]] },
+      opts:[["Confidently; the methodology and inputs are defensible",0],["We could reconcile it, but only through a one-off analysis",1],["We rely mainly on platform attribution and directional trends",2]] },
     { topic:"10 · Operating priority", domain:"Measurement & operating model", q:"How does your team decide which data issue or workflow improvement gets fixed next?",
       opts:[["By ranked evidence: customer impact, revenue upside and readiness",0],["Through a shared backlog shaped by stakeholders and available capacity",1],["The urgent or most visible request wins; structural fixes keep moving",2]] }
   ];
@@ -1414,7 +1547,7 @@ document.querySelectorAll(".faq-q").forEach(function(q){
       band = "Design-partner signal · Selective fit";
       title = "The stack is controlled, with a few expensive blind spots.";
       body = "Most foundations are in place, but selected decisions still depend on manual reconciliation or operator knowledge. A design partnership makes sense when one of those gaps is blocking an important lifecycle use case or safe AI adoption.";
-      signal = "<b>Fit condition:</b> a clearly sponsored use case in your weakest area — " + weakest.name.toLowerCase() + " — with access to the relevant systems.";
+      signal = "<b>Fit condition:</b> a clearly sponsored use case in your weakest area, " + weakest.name.toLowerCase() + ", with access to the relevant systems.";
     } else if(gap <= 14){
       band = "Design-partner signal · Strong fit";
       title = "You have the right mix of working systems and missing governance.";
@@ -1423,7 +1556,7 @@ document.querySelectorAll(".faq-q").forEach(function(q){
     } else {
       band = "Design-partner signal · Highest upside";
       title = "Your tools work. The governing layer between them is missing.";
-      body = "Several revenue-critical decisions are being made with fragmented evidence, manual controls or no clear owner. This is the highest-upside founding-cohort profile — provided your team can connect the relevant systems and commit to testing one priority use case with us.";
+      body = "Several revenue-critical decisions are being made with fragmented evidence, manual controls or no clear owner. This is the highest-upside founding-cohort profile, provided your team can connect the relevant systems and commit to testing one priority use case with us.";
       signal = "<b>Priority design-partner profile:</b> start with " + weakest.name.toLowerCase() + ", then use the Data Consistency assessment to separate foundational fixes from fast revenue unlocks.";
     }
     document.getElementById("rBand").textContent = band;
